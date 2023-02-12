@@ -1,1 +1,1 @@
-# Self-Study
+# Heejin's Reminder
