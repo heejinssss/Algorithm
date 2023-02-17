@@ -21,7 +21,7 @@ while True:
         done = False
         while True:
             # 왼쪽 기둥보다 큰 오른쪽 기둥이 나오면 중지
-            if lst[l][1] < lst[l+i][1]:
+            if lst[l][1] <= lst[l+i][1]:
                 done = True
                 break
 
@@ -33,7 +33,7 @@ while True:
                 max_ = temp[0][1]
                 max_idx = 0
                 for k in range(1, len(temp)):
-                    if max_ < temp[k][1]:
+                    if max_ <= temp[k][1]:
                         max_ = temp[k][1]
                         max_idx = k
                 sum += lst[l][1] + (temp[max_idx][0]-lst[l][0]-1) * temp[max_idx][1]
@@ -65,7 +65,7 @@ while True:
         done = False
         while True:
             # 오른쪽 기둥보다 큰 왼쪽 기둥이 나오면 중지
-            if lst[r+j][1] > lst[r][1]:
+            if lst[r+j][1] >= lst[r][1]:
                 done = True
                 break
 
@@ -77,11 +77,11 @@ while True:
                 max_ = temp[0][1]
                 max_idx = 0
                 for k in range(1, len(temp)):
-                    if max_ < temp[k][1]:
+                    if max_ <= temp[k][1]:
                         max_ = temp[k][1]
                         max_idx = k
                 sum += lst[r][1] + (lst[r][0]-temp[max_idx][0]-1) * temp[max_idx][1]
-                r -= max_idx
+                r = max_idx
                 break
 
         # 오른쪽 기둥보다 큰 왼쪽 기둥을 찾았다면
