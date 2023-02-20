@@ -15,13 +15,20 @@ time = int(input())
 - 이동한 거리 중 'w' or 'h'의 2배를 나누어줘도 남는 나머지만큼 0 방향으로 이동
 '''
 
-p = w-abs(w-(p+time)%(2*w))
-q = h-abs(h-(q+time)%(2*h))
+if p+time > w:
+    p = w-abs(w-(p+time)%(2*w))
+else:
+    p += time
+
+if q+time > h:
+    q = h-abs(h-(q+time)%(2*h))
+else:
+    q += time
 
 print(p, q)
 
 '''
-# 멋지게 시간 초과
+# 시간 초과
 cnt = 0
 cnt += time
 done = False
