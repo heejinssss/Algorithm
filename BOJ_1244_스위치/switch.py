@@ -34,7 +34,7 @@ for _ in range(std):
 
 cnt = 1
 for n in lst:
-    if cnt % 20 == 0: # 20번째 줄마다 줄 바꿈
+    if cnt % 20 == 0: # 20번째마다 줄 바꿈
         print(n)
         cnt += 1
     else:
