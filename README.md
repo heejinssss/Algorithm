@@ -1,1 +1,1 @@
-# Heejin's Reminder : 생각하자
+# Heejin's Reminder : 뚝백쓰 쓰기
