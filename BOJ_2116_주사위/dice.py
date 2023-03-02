@@ -1,7 +1,7 @@
 import sys
 sys.stdin = open("input.txt", "r")
 
-dict_ = {0: 5, 1: 3, 2: 4, 3: 1, 4: 2, 5: 0} # 주사위의 마주보고 있는 값의 인덱스 쌍 (불변의 진리)
+dict_ = {0: 5, 1: 3, 2: 4, 3: 1, 4: 2, 5: 0} # 주사위의 마주보고 있는 값의 인덱스 쌍 (불변)
 
 N = int(input()) # 주사위 개수
 dice = [list(map(int, input().split())) for _ in range(N)]
