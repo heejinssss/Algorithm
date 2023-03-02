@@ -10,7 +10,7 @@ for test_case in range(1, T + 1):
  
     sum_ = 0
     for num in arr[idx]:
-        sum_ += num # 중앙 값으로 시작
+        sum_ += num # 중앙 값 더하고 시작
  
     for i in range(N//2):
         sum_ += sum(arr[up-1][1+i:N-1-i]) + sum(arr[down+1][1+i:N-1-i])
